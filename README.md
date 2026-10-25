@@ -4,6 +4,9 @@ Ruang produksi video Sedarikini: **naskah → VO ElevenLabs → susun scene →
 render MP4 1080×1920**. Web app berjalan di Vercel, data dan auth di Supabase,
 sedangkan render tetap di Mac lewat worker lokal.
 
+**Aplikasi live:** <https://studio-ten-alpha-61.vercel.app>
+(project Vercel `studio`, root directory `studio/`, build oleh Vercel).
+
 ## Isi repo
 
 | Folder | Fungsi |
