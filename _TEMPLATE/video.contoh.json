@@ -1,0 +1,268 @@
+{
+  "_petunjuk": [
+    "Ini contoh lengkap: video Menspad yang dibangun ulang dari video.json.",
+    "Salin file ini menjadi video.json, lalu ganti teks, klip, dan ilustrasinya.",
+    "Kunci yang dimulai dengan garis bawah (_) diabaikan oleh mesin.",
+    "Satu kalimat = satu scene. Pilih salah satu: 'klip' (footage) atau 'ilustrasi' (latar krem).",
+    "Urutan kalimat harus sama dengan urutan suara di VO."
+  ],
+  "_catatan": [
+    "Nama 'klip' harus sama dengan nama file di footage/ tanpa ekstensi.",
+    "Gunakan 'stiker' untuk menaruh ilustrasi di atas footage.",
+    "judul boleh berupa daftar teks (muncul bergantian) atau objek dengan masuk/keluar/atas/ukuran.",
+    "Tulis '{angka}' di judul kalau memakai 'hitung'.",
+    "'pink' mewarnai satu kata di judul. 'kata_kunci' mewarnai kata di caption."
+  ],
+  "_daftar_ilustrasi": [
+    {
+      "kunci": "pembalut",
+      "untuk": "satu pembalut, hook"
+    },
+    {
+      "kunci": "sampah",
+      "untuk": "sampah berserakan, bagian masalah"
+    },
+    {
+      "kunci": "wanita",
+      "untuk": "satu figur wanita"
+    },
+    {
+      "kunci": "kalender",
+      "untuk": "kalender 30, satu siklus"
+    },
+    {
+      "kunci": "grid-pembalut",
+      "untuk": "25 pembalut, angka 25 pcs"
+    },
+    {
+      "kunci": "kerumunan",
+      "untuk": "banyak orang, jutaan"
+    },
+    {
+      "kunci": "pabrik",
+      "untuk": "sumber daya dan produksi"
+    },
+    {
+      "kunci": "jam-pasir",
+      "untuk": "waktu lama, terurai"
+    },
+    {
+      "kunci": "produk",
+      "untuk": "tumpukan pembalut kain"
+    },
+    {
+      "kunci": "cuci",
+      "untuk": "mencuci, cara pakai"
+    },
+    {
+      "kunci": "jemur",
+      "untuk": "menjemur, penutup"
+    }
+  ],
+  "judul": "2026-10 Menspad (contoh)",
+  "vo": "assets/audio/vo.wav",
+  "ekor": 2.6,
+  "kalimat": [
+    {
+      "teks": "Satu pembalut ini terlihat biasa.",
+      "klip": "pembalut sekali pakai",
+      "stiker": [
+        "pembalut"
+      ],
+      "judul": [
+        "satu pembalut",
+        "terlihat biasa."
+      ],
+      "pink": "biasa",
+      "kata_kunci": [
+        "biasa"
+      ]
+    },
+    {
+      "teks": "Tapi kalau dipakai hanya sekali, kemudian langsung menjadi sampah,",
+      "klip": "pembalut sekali pakai",
+      "mulai_media": 4.5,
+      "judul": [
+        "dipakai sekali,",
+        "jadi sampah."
+      ],
+      "pink": "sampah",
+      "kata_kunci": [
+        "sekali",
+        "sampah"
+      ]
+    },
+    {
+      "teks": "pasti akan banyak dampaknya.",
+      "klip": "sampah dijalan",
+      "mulai_media": 1.0,
+      "stiker": [
+        "sampah"
+      ],
+      "judul": [
+        "banyak dampaknya."
+      ],
+      "pink": "dampaknya",
+      "kata_kunci": [
+        "dampaknya"
+      ]
+    },
+    {
+      "teks": "Bayangkan, 1 wanita dalam 1 kali siklus mens per bulan",
+      "ilustrasi": [
+        "wanita",
+        "kalender"
+      ],
+      "judul": [
+        "bayangkan…"
+      ],
+      "kata_kunci": [
+        "bayangkan"
+      ],
+      "label": [
+        "1 wanita",
+        "1 siklus / bulan"
+      ]
+    },
+    {
+      "teks": "rata-rata menggunakan 25 pcs pembalut sekali pakai.",
+      "ilustrasi": "grid-pembalut",
+      "judul": [
+        "25 pcs"
+      ],
+      "pink": "25",
+      "kata_kunci": [
+        "25",
+        "pcs"
+      ]
+    },
+    {
+      "teks": "Bagaimana jika digunakan jutaan orang?",
+      "ilustrasi": "kerumunan",
+      "judul": [
+        "× jutaan orang?"
+      ],
+      "pink": "jutaan",
+      "kata_kunci": [
+        "jutaan",
+        "orang"
+      ]
+    },
+    {
+      "teks": "Berapa banyak sumber daya yang dieksploitasi untuk produksi?",
+      "ilustrasi": "pabrik",
+      "judul": [
+        "sumber daya",
+        "untuk produksi?"
+      ],
+      "pink": "produksi",
+      "kata_kunci": [
+        "sumber",
+        "daya",
+        "produksi"
+      ]
+    },
+    {
+      "teks": "Berapa banyak sampah yang dihasilkan?",
+      "klip": "sampah tps",
+      "mulai_media": 0.3,
+      "judul": [
+        "berapa banyak",
+        "sampah-nya?"
+      ],
+      "pink": "sampah",
+      "kata_kunci": [
+        "sampah"
+      ]
+    },
+    {
+      "teks": "Ditambah, sampah pembalut butuh waktu hingga 800 tahun untuk terurai.",
+      "klip": "sampah dijalan",
+      "mulai_media": 3.0,
+      "kecepatan": 0.6,
+      "stiker": [
+        "jam-pasir"
+      ],
+      "judul": [
+        {
+          "teks": "sampah pembalut",
+          "masuk": 0.05,
+          "keluar": 1.0
+        },
+        {
+          "teks": "{angka}",
+          "masuk": 1.0,
+          "atas": 560,
+          "ukuran": 330
+        },
+        {
+          "teks": "tahun untuk terurai.",
+          "masuk": 1.7,
+          "atas": 900,
+          "ukuran": 110
+        }
+      ],
+      "hitung": {
+        "ke": 800,
+        "mulai": 1.1,
+        "durasi": 0.9
+      },
+      "kata_kunci": [
+        "800",
+        "tahun",
+        "terurai"
+      ]
+    },
+    {
+      "teks": "Padahal, banyak alternatif pengganti pembalut sekali pakai.",
+      "klip": "detail produk menspad",
+      "judul": [
+        "padahal…",
+        "ada alternatif"
+      ],
+      "pink": "alternatif",
+      "kata_kunci": [
+        "alternatif",
+        "pengganti"
+      ]
+    },
+    {
+      "teks": "Salah satunya, pembalut kain. Kamu bisa gunakan berulang kali.",
+      "klip": "cuci menspad",
+      "mulai_media": 1.5,
+      "judul": [
+        "pembalut kain.",
+        "berulang kali."
+      ],
+      "pink": "kain",
+      "kata_kunci": [
+        "kain",
+        "berulang",
+        "kali"
+      ]
+    },
+    {
+      "teks": "Lebih hemat dan nggak nyampah.",
+      "klip": "jemur menspad",
+      "judul": [
+        {
+          "teks": "lebih hemat",
+          "masuk": 0.05,
+          "atas": 330,
+          "ukuran": 140
+        },
+        {
+          "teks": "& nggak nyampah.",
+          "masuk": 0.7,
+          "atas": 480,
+          "ukuran": 110
+        }
+      ],
+      "pink": "hemat",
+      "kata_kunci": [
+        "hemat",
+        "nyampah"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+.DS_Store
+**/.DS_Store
+
+# dependencies
+node_modules/
+**/node_modules/
+
+# Next.js
+studio/.next/
+studio/out/
+studio/build/
+studio/next-env.d.ts
+studio/.vercel/
+.vercel/
+*.tsbuildinfo
+
+# environment files
+.env
+.env.*
+**/.env
+**/.env.*
+!**/.env.example
+
+# render + generated media
+_RENDER/
+renders/
+_TEMPLATE/renders/
+_TEMPLATE/footage/
+_TEMPLATE/compositions/
+_TEMPLATE/assets/audio/
+_TEMPLATE/assets/footage/
+*.mp4
+*.mov
+*.m4v
+*.wav
+*.mp3
+*.MP3
+
+# large source media, not part of the app
+Menspad/
+2026-10 Menspad-uji/
+Bakar sampah/
+sample suara eliza/
+_FOOTAGE/*
+!_FOOTAGE/README.md

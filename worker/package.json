@@ -1,0 +1,17 @@
+{
+  "name": "sedarikini-worker",
+  "private": true,
+  "type": "module",
+  "description": "Worker render lokal untuk Sedarikini Studio",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env index.mjs",
+    "sekali": "node --env-file-if-exists=.env index.mjs --sekali",
+    "cek": "node --env-file-if-exists=.env index.mjs --cek"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.58.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

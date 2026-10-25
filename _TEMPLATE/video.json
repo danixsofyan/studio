@@ -1,0 +1,28 @@
+{
+  "judul": "video-baru",
+  "vo": "assets/audio/vo.wav",
+  "ekor": 2.6,
+  "kalimat": [
+    {
+      "teks": "Tulis kalimat pertama persis seperti yang diucapkan di VO.",
+      "klip": "nama klip pertama",
+      "judul": ["judul pembuka", "baris kedua."],
+      "pink": "pembuka",
+      "kata_kunci": ["pertama"]
+    },
+    {
+      "teks": "Kalimat kedua yang membahas angka atau data.",
+      "ilustrasi": "pembalut",
+      "judul": ["angka penting"],
+      "pink": "penting",
+      "kata_kunci": ["angka", "data"]
+    },
+    {
+      "teks": "Kalimat penutup.",
+      "klip": "nama klip penutup",
+      "judul": ["penutup."],
+      "pink": "penutup",
+      "kata_kunci": ["penutup"]
+    }
+  ]
+}
