@@ -139,6 +139,28 @@ tidak mengunduh berkas yang sama.
 Pratinjau di kanan adalah perkiraan CSS dari gaya final (judul Instrument Serif
 italic, pill caption, logo). Hasil pasti tetap dari render HyperFrames.
 
+### Ilustrasi bawaan
+
+Satu scene sebaiknya memakai **satu** ilustrasi (key), karena tiap ilustrasi
+sudah punya komposisi sendiri di kanvas 1080×1920.
+
+| Key | Cocok untuk |
+| --- | --- |
+| `pembalut`, `grid-pembalut`, `produk` | Satu pembalut, 25 pcs, tumpukan produk kain |
+| `kalender` | Siklus bulanan |
+| `cuci`, `jemur` | Cara pakai, perawatan, penutup |
+| `wanita`, `kerumunan` | Tokoh tunggal, "banyak orang"/"kita" |
+| `sampah` | Sampah berserakan |
+| `bakar` | Sampah dibakar: tumpukan, api, asap |
+| `asap` | Kepulan asap yang menyebar |
+| `udara` | Orang menghirup udara berpartikel |
+| `paru-paru` | Dampak ke pernapasan |
+| `abu` | Abu dan bongkahan logam (residu) |
+| `tanah-air` | Residu mencemari tanah dan saluran air |
+| `kembali` | Dampak yang berbalik ke permukiman |
+| `pabrik`, `jam-pasir` | Sumber daya/produksi, proses lama |
+
+
 ## 6. Yang perlu diketahui
 
 - **Render hanya di Mac.** Kalau worker mati, job tetap `antre` dan diproses saat
