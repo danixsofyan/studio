@@ -85,6 +85,55 @@ export const ILLUSTRATIONS: Illustration[] = [
     warna: "#e0a93f",
     ikon: "jemur",
   },
+  {
+    kunci: "bakar",
+    label: "Sampah dibakar",
+    deskripsi: "Tumpukan sampah, api, dan asap. Untuk pembakaran sampah.",
+    warna: "#e05a47",
+    ikon: "bakar",
+  },
+  {
+    kunci: "asap",
+    label: "Kepulan asap",
+    deskripsi: "Asap mengepul dan menyebar. Untuk asap pembakaran.",
+    warna: "#8aa0bf",
+    ikon: "asap",
+  },
+  {
+    kunci: "udara",
+    label: "Udara tercemar",
+    deskripsi: "Orang-orang menghirup udara berisi partikel halus dan asap.",
+    warna: "#9a8a76",
+    ikon: "udara",
+  },
+  {
+    kunci: "paru-paru",
+    label: "Paru-paru",
+    deskripsi: "Paru-paru dengan partikel yang masuk. Untuk dampak ke pernapasan.",
+    warna: "#e07a8f",
+    ikon: "paru",
+  },
+  {
+    kunci: "abu",
+    label: "Abu dan residu",
+    deskripsi: "Gundukan abu dengan bongkahan logam. Untuk residu pembakaran.",
+    warna: "#a89e8c",
+    ikon: "abu",
+  },
+  {
+    kunci: "tanah-air",
+    label: "Tanah dan air",
+    deskripsi: "Residu mencemari tanah dan terbawa air hujan ke saluran air.",
+    warna: "#b09068",
+    ikon: "tanah-air",
+  },
+  {
+    kunci: "kembali",
+    label: "Kembali ke kita",
+    deskripsi: "Asap yang sama kembali ke permukiman. Untuk dampak yang berbalik.",
+    warna: "#7a5c9e",
+    ikon: "kembali",
+  },
 ];
 
 export const ILUSTRASI_KEYS = new Set(ILLUSTRATIONS.map((i) => i.kunci));
