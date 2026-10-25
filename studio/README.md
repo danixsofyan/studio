@@ -22,6 +22,10 @@ Vercel tidak bisa menjalankan ffmpeg/HyperFrames atau menyimpan footage besar.
 Karena itu render tetap di Mac, lewat worker yang mengambil job dari Supabase.
 Semua yang lain (UI, database, auth, generate VO, upload footage) berjalan di Vercel.
 
+**Status deploy:** produksi aktif di <https://studio-ten-alpha-61.vercel.app>
+(Vercel project `studio`, root directory `studio/`, build sepenuhnya di Vercel —
+tidak pernah build lokal). Auth Supabase memakai domain itu sebagai Site URL.
+
 ## 1. Jalankan lokal
 
 ```bash
@@ -108,6 +112,7 @@ tidak mengunduh berkas yang sama.
    | `NEXT_PUBLIC_SUPABASE_URL` | URL project |
    | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | anon/publishable key |
    | `ELEVENLABS_API_KEY` | API key ElevenLabs |
+   | `ELEVENLABS_VOICE_ID` | voice ID default (boleh dikosongkan, atur di Pengaturan) |
    | `ELEVENLABS_MODEL_ID` | `eleven_multilingual_v2` |
 
 6. Deploy.
@@ -143,6 +148,15 @@ italic, pill caption, logo). Hasil pasti tetap dari render HyperFrames.
   1080p sebelum upload, atau hapus render lama setelah diunduh.
 - **ElevenLabs** butuh plan **Starter** ($6/bln) untuk lisensi komersial dan voice
   cloning. Free plan tidak boleh untuk konten promosi.
+- **Batasan plan Free di API** (diuji pada Oktober 2026):
+  - **Instant voice cloning** ditolak: `payment_required` /
+    `can_not_use_instant_voice_cloning`.
+  - **Library voice** (mis. *Riri Rida – Documentary & News*) ditolak lewat API:
+    `502` dengan pesan “Free users cannot use library voices via the API”.
+  - Voice premade yang tetap jalan lewat API: Sarah, Jessica, Alice.
+  - Kalau butuh library voice di plan Free: generate di web ElevenLabs, unduh MP3,
+    lalu pakai **Unggah VO** di editor. Tombol **Generate VO** hanya akan berhasil
+    untuk voice yang diizinkan plan.
 - **VO disimpan sebagai MP3** di Supabase; worker menormalkannya ke 48 kHz mono
   WAV sebelum render.
 - **Tidak ada upload lewat Vercel**, jadi batas body 4,5 MB tidak berlaku.
@@ -174,6 +188,8 @@ worker/
 | Login terus balik ke halaman masuk | `NEXT_PUBLIC_*` salah, atau Site URL Supabase belum diisi domain Vercel. |
 | Generate VO 503 | `ELEVENLABS_API_KEY` belum ada di environment. Restart dev server setelah mengubah `.env.local`. |
 | Generate VO 422 | Voice ID tidak valid. Pilih ulang di **Pengaturan**. |
+| Generate VO 502 “Free users cannot use library voices via the API” | Library voice tidak tersedia lewat API di plan Free. Generate di web ElevenLabs lalu **Unggah VO**, atau pilih voice premade. |
+| Generate VO `payment_required` saat clone suara | Instant voice cloning tidak termasuk plan Free. Upgrade ke Starter/Creator. |
 | Job tetap `antre` | Worker belum jalan / service key salah. Cek `npm run cek`. |
 | Job gagal di check | Buka log worker, biasanya ada scene tanpa footage atau judul `{angka}` tanpa angka berjalan. |
 | Thumbnail tidak muncul | Browser tidak bisa decode codec (mis. HEVC di Chrome). Render tetap jalan; thumbnail bisa kosong. |
