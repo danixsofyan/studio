@@ -1,0 +1,15 @@
+{
+  "name": "sedarikini-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "baru": "node scripts/baru.mjs",
+    "vo": "node scripts/vo.mjs",
+    "buat": "node scripts/buat.mjs",
+    "buat:tanpa-preview": "node scripts/buat.mjs --no-preview",
+    "dev": "npx --yes hyperframes@0.8.186 preview",
+    "check": "npx --yes hyperframes@0.8.186 check",
+    "render": "npx --yes hyperframes@0.8.186 render",
+    "publish": "npx --yes hyperframes@0.8.186 publish"
+  }
+}
